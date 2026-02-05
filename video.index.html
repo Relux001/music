@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Видео плеер</title>
+        <style>
+            .box{
+                text-align: center;
+            }
+            #video{
+                cursor: default;
+            }
+            body{
+                background: rgba(0, 0, 0, 0.833);
+            }
+            .container{
+                text-align: center;
+            }
+            #music1{
+                cursor:pointer;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                transition: 1s;
+            }
+            #music2{
+                cursor:pointer;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                transition: 1s;
+            }
+            #music3{
+                cursor:pointer;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                transition: 1s;
+            }
+            button:hover{
+                box-shadow:
+                0 0 5px white,
+                0 0 10px white,
+                0 0 15px white;
+                transform:translateY(5px);
+            }
+            p{
+                text-align:center;
+                color:white;
+                display: none;
+            }
+            .subcitri{
+                text-align:center;
+                transform:translate(-7px,12px);
+            }
+            #text1{
+                display:none;
+                cursor:pointer;
+                transition: 1s;
+            }
+            #text2{
+                display:none;
+                cursor:pointer;
+                transition: 1s;
+            }
+            #text3{
+                display:none;
+                cursor:pointer;
+                transition: 1s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+        <video id="video" onclick="blay()" controls></video>
+        </div>
+        <div class="container">
+            <button id="music1" onclick="video('lizica.mp4');lisa()">Охота на Лису</button>
+            <button id="music2" onclick="video('lizer.mp4');liber()">Lizer-молодым</button>
+            <button id="music3" onclick="video('noc.mp4');nocc()">CHEBANOV - ночь</button>
+        </div>
+        <div class="subcitri">
+        <button id="text1" onclick="text1()">Показать текст</button>
+        <button id="text2" onclick="text2()">Показать текст</button>
+        <button id="text3" onclick="text3()">Показать текст</button>
+        </div>
+        <p id="lisa">Дале-далеко, в той стране, где всходит солнце<br>
+           Ранним утром милый больше не проснётся<br>
+           Льётся алая река, лиса смеётся<br>
+           С восточным ветром пусть сказание несётся<br>
+           В забытом ныне городе жила девица<br>
+           Великим самураям от любви не спится<br>
+           Лица жадные горят. Как не влюбиться?<br>
+           Но в хитрых девичьих глазах кошмар таится<br>
+           Не беги за нею, глупый<br>
+           По её следам идут лишь трупы<br>
+           Зубы крепче, чем металл<br>
+           Ты попал!<br>
+           <br>
+           <br>
+           По улице шагает, бёдрами качая<br>
+           Дурак влюблённый пригласит на кружку чая<br>
+            Злая вслед кричит жена, свой брак спасая<br>
+           В нём голос совести сожрёт любовь глухая<br>
+           Под нежным платьем хвостов девять у лисицы<br>
+           Сведут с ума, дорожкой в гроб ведут ресницы<br>
+           Жрицей, страсти названы лишь единицы<br>
+           Оставшись в разуме, не могут с ней смириться<br>
+        Слышен вдалеке собачий вой<br>
+        Охота за лисьей головой<br>
+         Сверкает в темноте оскал<br>
+        Он попал!<br>
+        <br>
+        <br>
+        И в норе, где не достанут псы<br>
+        Тихий шёпот раненой лисы<br>
+        Проклинает та свою любовь<br>
+        Яркий мой свет, скажи: любишь или нет?<br>
+        Я тобой была пьяна, но дома ждёт тебя она<br>
+        Мою тайну всем открыл, гнев мой тебя погубил<br>
+        Местью жить мне до конца — полюбила я лжеца</p>
+
+        <p id="liser">Никто нас не услышит и никто нам не поможет<br>
+Я дурак, если считаю, что другим не всё равно<br>
+Мы с тобою так похожи, мы гуляем по протоптанной дороге<br>
+Из утробы прямо в деревянный гроб<br>
+<br>
+<br>
+Запомни меня молодым<br>
+Молодым и беспечным<br>
+Пока вы верите людям в ящиках<br>
+Я вижу себя настоящего<br>
+<br>
+<br>
+Я бы улыбнулся, но нет повода<br>
+Вроде не зима, но почему мне холодно?<br>
+Повеси ещё немного на другом конце провода, так одиноко сейчас<br>
+Пустота моих комнат такая же, как пустота в моей, в моей душе<br>
+<br>
+Я подкуриваю сигу стоя на балконе молча<br>
+Я молчу, а внутри меня всё разрывает в клочья<br>
+Я хочу кричать, но не вижу даже в этом смысла<br>
+Как тут не стать самоубийцей?<br>
+<br>
+<br>
+Я кричу в глазах, но никто не слышит<br>
+Мы одинокие герои старых и забытых книжек<br>
+Кто-то говорит по телевизору в программе<br>
+Я так давно не звонил маме<br>
+<br>
+<br>
+Никто нас не услышит и никто нам не поможет<br>
+Я дурак, если считаю, что другим не всё равно<br>
+Мы с тобою так похожи, мы гуляем по протоптанной дороге<br>
+Из утробы прямо в деревянный гроб<br>
+<br>
+<br>
+Запомни меня молодым<br>
+Молодым и беспечным<br>
+Пока вы верите людям в ящиках<br>
+Я вижу себя настоящего<br>
+<br>
+<br>
+Ветер, унеси мои мысли отсюда<br>
+Замети моё прошлое, вьюга<br>
+И оставь меня здесь одного<br>
+<br>
+<br>
+Мы строим свои космосы в коробках<br>
+И не впускаем остальных в свои сердца<br>
+Мы говорим "люблю", но держим это в скобках<br>
+И когда больно, сами же валяемся в слезах<br>
+<br>
+<br>
+Мы принимаем доброту за слабость<br>
+И издеваемся над теми, кто слабей<br>
+Мы живём Вконтактах, Инстаграмах<br>
+Может быть поэтому я не люблю людей<br>
+<br>
+<br>
+Никто нас не услышит и никто нам не поможет<br>
+Я дурак, если считаю, что другим не всё равно<br>
+Мы с тобою так похожи, мы гуляем по протоптанной дороге<br>
+Из утробы прямо в деревянный гроб<br>
+<br>
+<br>
+Запомни меня молодым<br>
+Молодым и беспечным<br>
+Пока вы верите людям в ящиках<br>
+        Я вижу себя настоящего<br></p>
+        <p id="nocb">Ночь, что за странная свобода<br>
+От заката до восхода<br>
+Ждать тебя, надеясь вновь<br>
+День, я прошу тебя, не надо<br>
+От восхода до заката<br>
+Говорить мне про любовь<br><br>
+
+Нет, я не буду говорить<br>
+Что я все готов простить<br>
+И обид не помню я<br>
+Но, ты же знаешь все равно<br>
+Что в душе моей темно<br>
+Если рядом нет тебя<br><br>
+
+Ночь, ожиданья холод<br>
+Боль, словно я расколот<br>
+Я ничего не вижу<br>
+Сам себя я ненавижу<br>
+Вновь слезы ниоткуда<br>
+В кровь я кусаю губы<br>
+Все, что мне сегодня надо<br>
+Просто быть с тобою рядом<br><br>
+
+Ночь, что за странная свобода<br>
+От заката до восхода<br>
+Ждать тебя, надеясь вновь<br>
+День, я прошу тебя, не надо<br>
+От восхода до заката<br>
+Говорить мне про любовь<br><br>
+
+Нет я не буду говорить<br>
+Что хочу тебя забыть<br>
+И не вспомнить никогда<br>
+Но ты должна меня понять<br>
+Просто я устану ждать<br>
+И быть может навсегда<br><br>
+
+Пусть ты меня не слышишь<br>
+Пусть голос твой все тише<br>
+Я буду верить в чудо<br>
+Просто так из ниоткуда<br>
+Нет не прошу я много<br>
+Все что прошу у Бога<br>
+Мне так мало в жизни надо<br>
+Просто быть с тобою сегодня рядом<br><br>
+
+Ночь, что за странная свобода<br>
+От заката до восхода<br>
+Ждать тебя, надеясь вновь<br>
+День, я прошу тебя, не надо<br>
+От восхода до заката<br>
+Говорить мне про любовь<br><br>
+
+Ночь, что за странная свобода<br>
+От заката до восхода<br>
+Ждать тебя, надеясь вновь<br>
+День, я прошу тебя, не надо<br>
+От восхода до заката<br>
+Говорить мне про любовь<br>
+</p>
+        <script>
+             let isPlay = true
+            function blay(){
+                if (isPlay === true){
+                document.getElementById("video").play();
+                document.getElementById("video").style.cursor="default";
+                isPlay = false
+                }
+                else{
+                    document.getElementById("video").pause();
+                    document.getElementById("video").style.cursor="pointer";
+                    isPlay = true
+                }
+            }
+            function video(src){
+                let player = document.getElementById("video");
+                player.src = src;
+            }
+            function lisa(){
+                document.getElementById("text2").style.display="none";
+                document.getElementById("liser").style.display="none";
+                document.getElementById("nocb").style.display="none";
+                document.getElementById("text3").style.display="none";
+                document.getElementById("text1").style.display="inline";
+            }
+            let texxt1 = true;
+            function text1(){
+                if (texxt1 === true){
+                document.getElementById("lisa").style.display="block";
+                texxt1 = false;
+                }
+                else{
+                    document.getElementById("lisa").style.display="none";
+                    texxt1 = true;
+                }
+            }
+            function liber(){
+                document.getElementById("text2").style.display="inline";
+                document.getElementById("text1").style.display="none";
+                document.getElementById("lisa").style.display="none";
+                document.getElementById("nocb").style.display="none";
+                document.getElementById("text3").style.display="none";
+            }
+            let pll2 = true;
+            function text2(){
+                if (pll2 === true){
+                document.getElementById("liser").style.display="block";
+                pll2 = false
+                }
+                else{
+                    document.getElementById("liser").style.display="none";
+                    pll2 = true;
+                }
+            }
+            function nocc(){
+                document.getElementById("text3").style.display="inline";
+                document.getElementById("text1").style.display="none";
+                document.getElementById("lisa").style.display="none";
+                document.getElementById("text2").style.display="none";
+                document.getElementById("liser").style.display="none";
+            }
+            let nocch = true;
+            function text3(){
+                if (nocch === true){
+                document.getElementById("nocb").style.display="block";
+                nocch = false;
+                }
+                else{
+                    document.getElementById("nocb").style.display="none";
+                    nocch = true;
+                }
+            }
+        </script>
+    </body>
+</html>
